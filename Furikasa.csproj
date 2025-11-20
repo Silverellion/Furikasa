@@ -18,5 +18,12 @@
       <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
       <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Tesseract" Version="4.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="tessdata\*.traineddata" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="tessdata\README.txt" CopyToOutputDirectory="Never" />
+    <None Include="Images\README.txt" CopyToOutputDirectory="Never" />
   </ItemGroup>
 </Project>
